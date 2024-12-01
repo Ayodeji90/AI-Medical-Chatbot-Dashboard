@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.dashboard {
+    width: 100vw;
+    height: 100vh;
+    background: url(/public/assets/background.png), linear-gradient(254deg, #FFF 8.98%, #C1DEEF 321.92%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 6rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.button {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.get-started {
+    color: white;
+    background: #1376F8;
+    box-shadow: 0px -1px 10px 0px #1376F8;
+}
+
+.sign-up {
+    background: linear-gradient(82deg, #1376F8 -1.73%, #4AA2F8 31.16%, #1376F8 58.21%, #4AA2F8 104.36%);
+    color: white;
+    margin-right: .7rem;
+}
+
+.sign-in {
+    background: white;
+    color: #1376F8;
+    border: 1px solid #1376F8;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    background-color: #005bb5;
+    color: white;
+}
+
+.sign-in:hover {
+    background-color: #e6f0ff;
+    color: #005bb5;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    margin-bottom: 12rem;
+    width: 80%;
+}
+
+.header-title {
+    font-size: 3.5rem;
+    color: #011632;
+}
+
+.line {
+  margin-top: -10px;
+  display: block;
+}
+
+.header-subtitle {
+    width: 80%;
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: 1.5rem 0;
+}
+
+.right-content {
+  width: 100%;
+}
+
+.hero-img {
+    width: 110%;
+    margin-left: 5rem;
+    margin-top: -3rem;
+}
+
+.services {
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    bottom: 2rem;
+    right: 0;
+    padding-left: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 7rem;
+    border-radius: 72px 0px 0px 72px;
+    background: rgba(255, 255, 255, 0.86);
+    backdrop-filter: blur(8.550000190734863px);
+}
+
+.services-content {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.footer-content {
+  font-size: .7rem;
+  margin-top: -15rem;
+}
