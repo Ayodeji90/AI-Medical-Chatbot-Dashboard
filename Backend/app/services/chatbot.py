@@ -11,7 +11,7 @@ def authenticate_huggingface():
     """
     Log in to Hugging Face using an access token.
     """
-    huggingface_token = "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"  # Replace with your token
+    huggingface_token = "Put your hugging face user access token here "  # Replace with your token
     login(huggingface_token)
 
 def load_model_and_tokenizer():
