@@ -7,7 +7,7 @@ def authenticate_huggingface():
     """
     Log in to Hugging Face using an access token.
     """
-    huggingface_token = "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"  # Replace with your token
+    huggingface_token = "Put your hugging face access token here"  # Replace with your token
     login(huggingface_token)
 
 # Load the Llama-2 model and tokenizer
