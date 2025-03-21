@@ -1,0 +1,57 @@
+import React, { useState } from "react";
+import { Link, Outlet } from "react-router-dom";
+import { FaStethoscope, FaCalendarAlt, FaPills, FaMapMarkerAlt, FaThermometerHalf } from "react-icons/fa";
+
+const HealthDashboard = () => {
+  const [activeNav, setActiveNav] = useState("appointments");
+
+  const navItems = [
+    { id: "appointments", label: "Appointments", icon: <FaCalendarAlt />, path: "appointments" },
+    { id: "medicines", label: "Medicines", icon: <FaPills />, path: "medicines" },
+    { id: "tracker", label: "Tracker", icon: <FaMapMarkerAlt />, path: "tracker" },
+    { id: "symptom-checker", label: "Symptom Checker", icon: <FaThermometerHalf />, path: "symptom-checker" },
+  ];
+
+  return (
+    <div className="flex w-screen h-screen bg-gradient-to-tr from-white via-blue-100 to-blue-200 overflow-hidden">
+      {/* Left Navigation Bar */}
+      <div className="w-1/5 bg-blue-900 h-full flex flex-col items-start py-8 px-4 text-white">
+        <div className="flex items-center justify-between w-full px-2">
+          <img
+            src="../assets/logo1.png"
+            alt="Logo"
+            className="w-24"
+          />
+        </div>
+        <ul className="flex flex-col gap-4 w-full mt-8">
+          {navItems.map((item) => (
+            <li
+              key={item.id}
+              className={`w-full flex items-center justify-start px-4 py-3 rounded-lg cursor-pointer ${
+                activeNav === item.id
+                  ? "bg-white text-blue-900 shadow-md"
+                  : "hover:bg-blue-700"
+              }`}
+              onClick={() => setActiveNav(item.id)}
+            >
+              <Link
+                to={item.path}
+                className="flex items-center gap-2 text-inherit no-underline"
+              >
+                <div className="text-lg">{item.icon}</div>
+                <span>{item.label}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Dashboard Content */}
+      <div className="flex-1 flex flex-col overflow-hidden relative">
+        <Outlet /> {/* This will render the nested routes (e.g., Appointments, Medicines, etc.) */}
+      </div>
+    </div>
+  );
+};
+
+export default HealthDashboard;
